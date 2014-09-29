@@ -181,7 +181,9 @@ h2
     background-image: url("../images/header-bg.jpg");
     height: 499px;
     text-align: center;
-    line-height: 499px;
+}
+#header .logo-holder{
+    margin-top: 150px;
 }
 .parallax {
     background-attachment: fixed;
