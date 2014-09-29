@@ -9,10 +9,6 @@ body
     font-family: 'Open Sans', sans-serif;
     line-height: 1.5;
 }
-.sticky{
-    top: 0;
-    background-color: #000;
-}
 h1,
 h2,
 h3
@@ -64,25 +60,18 @@ h2
 {
     padding: 0;
 }
-.active
-{
-    color: #d95c5c !important;
-    text-decoration: underline !important;
-}
 #menu{
     width: 100%;
 }
 .unsticky{
     position: relative!important;
-    background-color: #ffffff;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
-    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    background-color: #e5eee9;
     z-index: 2!important;
 }
 #nav ul{
     list-style-type: none;
     margin: 0;
-    padding: 10px 0;
+    padding: 0;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -91,18 +80,53 @@ h2
 #nav li{
     display: block;
     flex-grow: 1;
+    padding: 25px 0;
 }
 #nav li a{
-    font-size: 15px;
+    font-size: 12px;
     text-transform: uppercase;
     text-decoration: none;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
 }
 .unsticky #nav li a{
-    color: #999999;
+    color: #5a777b;
 }
 
+.unsticky #nav li a:hover{
+    color: #011339;
+}
+.unsticky .logo-sm{
+    overflow:hidden;
+    height:0;
+    width:0;
+    padding: 0!important;
+    opacity: 0;
+    -o-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.sticky{
+    top: 0;
+    background-color: #011339;
+}
+.sticky .logo-sm{
+    padding: 13px 0 7px 0!important;
+    opacity: 1;
+    -o-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
 .sticky #nav li a{
-    color: #ffffff;
+    color: #5a777b;
+}
+.sticky #nav li a:hover{
+    color: #fff;
+}
+.sticky #nav li a.active{
+    color: #fff;
 }
 
 #scroller
