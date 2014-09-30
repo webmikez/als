@@ -2,7 +2,7 @@ new WOW().init();
 
 window.onload = function(){
 	$('#sites-slider').lemmonSlider({
-		'infinite' : false
+		'infinite' : true
 	});
     $('.timer').countTo();
 }
