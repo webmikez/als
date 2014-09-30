@@ -4,6 +4,7 @@ window.onload = function(){
 	$('#sites-slider').lemmonSlider({
 		'infinite' : false
 	});
+    $('.timer').countTo();
 }
 
 $(function () {
@@ -48,13 +49,13 @@ jQuery(document).ready(function() {
     function scrollToHash(hash) {
         var target = hash,
             $target = $(target),
-            offset_delta = 75;
+            offset_delta = 77;
 
         if(hash == '') return;
 
         $('html, body').stop().animate({
             'scrollTop': $target.offset().top - offset_delta
-        }, 900, 'swing', function () {
+        }, 700, 'swing', function () {
             window.location.hash = target;
         });
     }
