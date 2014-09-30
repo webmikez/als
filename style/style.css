@@ -108,6 +108,7 @@ h2
     transition: all 0.3s ease;
 }
 .sticky{
+    top: 0;
     background-color: #011339;
 }
 .sticky .logo-sm{
@@ -182,7 +183,7 @@ h2
     text-align: center;
 }
 #header .logo-holder{
-    margin-top: 150px;
+    padding-top: 150px;
 }
 .parallax {
     background-attachment: fixed;
@@ -430,6 +431,7 @@ form{
 form small {
     display: inline-block;
     padding-right: 15px;
+    padding-top: 12px;
     width: 90px;
     color: #4a4a4a;
     text-align: right;
@@ -486,6 +488,31 @@ input[type="submit"] {
 }
 input[type="submit"]:hover {
     background: #f01844;
+}
+
+.help-block{
+    display: none;
+}
+.has-error .help-block{
+    display: block;
+    margin-top: 4px;
+    font-size: 13px;
+    color: #ae1134;
+}
+.t1 .has-error .help-block{
+    padding-left: 105px;
+}
+.t2 .has-error .help-block{
+    padding-left: 119px;
+    text-align: left;
+}
+.has-error small{
+    color: #ae1134;
+}
+.has-error textarea,
+.has-error input[type="text"]{
+    border-color: #ae1134;
+    background-color: #f9f2f4;
 }
 p.submit-button {
     text-align: center;

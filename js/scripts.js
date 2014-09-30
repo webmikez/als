@@ -8,8 +8,7 @@ window.onload = function(){
 
 $(function () {
 	$('#menu').stickyNavbar({
-		animDuration: 700,
-        startAt: 190
+		animDuration: 700
 	});
 	
 	
