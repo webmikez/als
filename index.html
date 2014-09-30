@@ -7,17 +7,18 @@
 	<link href="style/animate.css" rel="stylesheet">
 	<link href="style/style.css" rel="stylesheet">
 	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/jquery.stickyNavbar.min.js"></script>
+	<script type="text/javascript" src="js/affix.js"></script>
+	<script type="text/javascript" src="js/scrollspy.js"></script>
 	<script type="text/javascript" src="js/lemmon-slider.js"></script>
 	<script type="text/javascript" src="js/wow.min.js"></script>
 	<script type="text/javascript" src="js/scripts.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Roboto+Slab:400,100,300,700&subset=cyrillic-ext,latin' rel='stylesheet' type='text/css'>
 </head>
-<body>
+<body data-spy="scroll" data-target="#menu">
 	<div id="header" class="parallax">
         <div class="logo-holder"><img src="images/logo-new.png" alt=""/></div>
 	</div>
-	<div id="menu" class="menu">
+	<div id="menu" class="menu" data-spy="affix">
 		<div class="section">
 			<div id="nav">
 				<ul>
@@ -36,7 +37,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="about" class="scrollto block">
+	<div id="about" class="block">
 		<div class="section">
 			<h2>О Компании</h2>
 			<div class="block">
@@ -49,7 +50,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="themes" class="scrollto block">
+	<div id="themes" class="block">
 		<div class="section">
 			<h2>Наши тематики</h2>
 			<div class="block">
@@ -61,7 +62,7 @@
 			</div>
 		</div>
 	</div>	
-	<div id="types" class="scrollto block">
+	<div id="types" class="block">
 		<div class="section">
 			<h2>Виды рекламного взаимодействия</h2>
 			<div class="block">
@@ -79,7 +80,7 @@
 			</div>
 		</div>
 	</div>		
-	<div id="advantages" class="scrollto block">
+	<div id="advantages" class="block">
 		<div class="section">
 			<h2>Наши преимущества</h2>
 			<div class="block">
@@ -93,7 +94,7 @@
 			</div>
 		</div>
 	</div>			
-	<div id="numbers" class="scrollto block">
+	<div id="numbers" class="block">
 		<div class="section">
 			<h2>ФАКТЫ О НАС</h2>
 			<div class="block">
@@ -105,7 +106,7 @@
 			</div>
 		</div>
 	</div>	
-	<div id="clients" class="scrollto block">
+	<div id="clients" class="block">
 		<div class="section">
 			<h2>Наши клиенты</h2>
 			<div class="block">
@@ -164,7 +165,7 @@
 			</div>
 		</div>
 	</div>	
-	<div id="price" class="scrollto block">
+	<div id="price" class="block">
 		<div class="section">
 			<h2>Цены</h2>
 			<div class="block">
@@ -173,7 +174,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="contact" class="scrollto block">
+	<div id="contact" class="block">
 		<div class="section">
 			<h2>Контакты</h2>
 			<div class="contact-text">
@@ -205,11 +206,7 @@
 	<div id="footer">
 		<div class="section">
 			2014 © ALS Production. Все права защищены.
-		</div>
-	</div>
-	<div id="scroller">
-		<div class="section">
-			<a id="totop" href="#"><span></span></a>
+            <div class="scroll-to-top"></div>
 		</div>
 	</div>
 </body>

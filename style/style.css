@@ -107,11 +107,11 @@ h2
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
-.sticky{
-    top: 0;
+.affix{
+    position: fixed;
     background-color: #011339;
 }
-.sticky .logo-sm{
+.affix .logo-sm{
     padding: 13px 0 7px 0!important;
     opacity: 1;
     -o-transition: all 0.3s ease;
@@ -119,62 +119,29 @@ h2
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
-.sticky #nav li a{
+.affix #nav li a{
     color: #5a777b;
 }
-.sticky #nav li a:hover{
+.affix #nav li a:hover{
     color: #fff;
 }
-.sticky #nav li a.active{
+.affix #nav li a.active{
     color: #fff;
 }
 
-#scroller
-{
+.scroll-to-top{
     position: fixed;
-    bottom: -44px;
-
-    display: none;
-
-    width: 100%;
-    height: 44px;
-}
-#scroller .section
-{
-    overflow: visible;
-
-    padding: 0;
-}
-#scroller span
-{
-    display: block;
-
-    width: 15px;
-    height: 11px;
-
-    background: transparent url('../images/arrow.png') 50% 50% no-repeat;
-}
-#scroller #totop
-{
-    position: relative;
+    cursor: pointer;
+    float: right;
     bottom: 68px;
-
-    float: right;
-    float: right;
-
-    padding: 12px 10px;
-
-    border-radius: 5px;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
-    background: none rgba(0, 0, 0, .3);
-    color: #fff;
-
-    text-decoration: none;
-    -webkit-transition: all .4s ease-out;
-    transition: all .4s ease-out;
+    width: 35px;
+    height: 35px;
+    background: url('../images/arrow.png') 50% 50% no-repeat rgba(0, 0, 0, .3);
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
 }
-#scroller #totop:hover
-{
-    background: none rgba(174, 17, 52, .3);
+.scroll-to-top:hover{
+    background-color: rgba(174, 17, 52, .3);
 }
 
 #header{
