@@ -9,7 +9,7 @@ window.onload = function(){
 $(function () {
 	$('#menu').stickyNavbar({
 		animDuration: 700,
-        startAt: 100
+        startAt: 190
 	});
 	
 	
@@ -32,5 +32,24 @@ $(function () {
 		$('html, body').animate({scrollTop: 0}, 500);
 		return false;
 	});
+
+    $('form#commentform').on('submit', function() {
+        $.ajax({
+            'url': 'email.php',
+            'type': 'POST',
+            'data': $(this).serialize(),
+            'dataType': 'json',
+            'success': function(obj) {
+                if("status" in obj && obj.status == "success"){
+                    alert('Успешно отправлено');
+                } else {
+                    for (var p in obj) {
+                        $('form#commentform input[name="' + p + '"]]').parent().addClass('has-error');
+                    }
+                }
+            }
+        });
+        return false;
+    });
 	
 });
