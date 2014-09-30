@@ -60,43 +60,44 @@ h2
 {
     padding: 0;
 }
-#menu{
+.menu-holder{
     width: 100%;
 }
-.unsticky{
+.affix-top{
     position: relative!important;
     background-color: #e5eee9;
     z-index: 2!important;
 }
-#nav ul{
+.menu-holder ul{
     list-style-type: none;
-    margin: 0;
+    width: 1000px;
+    margin: 0 auto;
     padding: 0;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
 }
 
-#nav li{
+.menu-holder li{
     display: block;
     flex-grow: 1;
     padding: 25px 0;
 }
-#nav li a{
+.menu-holder li a{
     font-size: 12px;
     text-transform: uppercase;
     text-decoration: none;
     font-weight: 700;
     font-family: 'Open Sans', sans-serif;
 }
-.unsticky #nav li a{
+.affix-top li a{
     color: #5a777b;
 }
 
-.unsticky #nav li a:hover{
+.affix-top li a:hover{
     color: #011339;
 }
-.unsticky .logo-sm{
+.affix-top .logo-sm{
     overflow:hidden;
     height:0;
     width:0;
@@ -108,8 +109,9 @@ h2
     transition: all 0.3s ease;
 }
 .affix{
-    position: fixed;
     background-color: #011339;
+    z-index: 100;
+    top: 0;
 }
 .affix .logo-sm{
     padding: 13px 0 7px 0!important;
@@ -119,21 +121,22 @@ h2
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
-.affix #nav li a{
+.affix li a{
     color: #5a777b;
 }
-.affix #nav li a:hover{
+.affix li a:hover{
     color: #fff;
 }
-.affix #nav li a.active{
+.affix .active a{
     color: #fff;
 }
 
 .scroll-to-top{
     position: fixed;
+    right: 15%;
+    bottom: 28px;
+    display: none;
     cursor: pointer;
-    float: right;
-    bottom: 68px;
     width: 35px;
     height: 35px;
     background: url('../images/arrow.png') 50% 50% no-repeat rgba(0, 0, 0, .3);
@@ -190,13 +193,12 @@ h2
 {
     background: #e3e3e3;
 }
-#footer
-{
+#footer{
     background: #787878;
     color: #fff;
 }
-.slider
-{
+
+.slider{
     position: relative;
 
     overflow: hidden;
