@@ -9,7 +9,7 @@ window.onload = function(){
 $(function () {
 	$('#menu').stickyNavbar({
 		animDuration: 700,
-        cssAnimation: "fade"
+        startAt: 100
 	});
 	
 	
