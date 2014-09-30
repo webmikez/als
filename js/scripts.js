@@ -45,6 +45,25 @@ jQuery(document).ready(function() {
 		return false;
 	});
 
+    function scrollToHash(hash) {
+        var target = hash,
+            $target = $(target),
+            offset_delta = 75;
+
+        if(hash == '') return;
+
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top - offset_delta
+        }, 900, 'swing', function () {
+            window.location.hash = target;
+        });
+    }
+
+    $('#nav-holder a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        scrollToHash(this.hash);
+    });
+
     $('form#commentform').on('submit', function() {
         $.ajax({
             'url': 'email.php',
