@@ -39,11 +39,19 @@ $(function () {
             'data': $(this).serialize(),
             'dataType': 'json',
             'success': function(obj) {
+                $('p.has-error').removeClass('has-error');
+
                 if("status" in obj && obj.status == "success"){
                     alert('Успешно отправлено');
                 } else {
+                    if("error" in obj) {
+                        alert(obj.error);
+                    }
+
                     for (var p in obj) {
-                        $('form#commentform input[name="' + p + '"]]').parent().addClass('has-error');
+                        var el = $('#commentform #' + p);
+                        el.parent().addClass('has-error');
+                        el.next('span').html(obj[p]);
                     }
                 }
             }
