@@ -87,15 +87,30 @@ $(function(){
         e.preventDefault();
         var hash = this.hash;
         var $this = $(this);
-        var top = hash == '#about' ? 499 : Math.round($(hash).offset().top)-74;
+        var top = hash == '#about' ? 499 : Math.round($(hash).offset().top)-73;
 
         $('html, body').finish().animate({
             scrollTop: top
         },450,function(){
             $('li.active', $header).removeClass('active');
             $this.parent().addClass('active');
+            window.location.hash = hash;
         });
     });
+
+    $window.on('load',function(){
+        var hash = window.location.hash;
+        var top = hash == '#about' ? 499 : Math.round($(hash).offset().top)-73;
+
+        $('html, body').finish().animate({
+            scrollTop: top
+        },450,function(){
+            $('li.active', $header).removeClass('active');
+            $header.find("ul#nav li a[href='" + hash +"']").parent().addClass('active');
+            window.location.hash = hash;
+        });
+    });
+
     $window.on('scroll',function(){
         $this = $(this);
         stop = Math.round($(window).scrollTop());
