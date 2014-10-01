@@ -33,12 +33,21 @@ jQuery(document).ready(function() {
         jQuery('html, body').animate({scrollTop: 0}, duration);
         return false;
     })
+
+    var mainbottom = $('.menu-holder').offset().top;
 	$(window).scroll(function () {
 		if ($(this).scrollTop() > 0) {
 			$('#scroller').fadeIn();
 		} else {
 			$('#scroller').fadeOut();
 		}
+
+        var stop = Math.round($(window).scrollTop());
+        if (stop > mainbottom) {
+            $('.menu-holder').removeClass('affix-top').addClass('affix');
+        } else {
+            $('.menu-holder').removeClass('affix').addClass('affix-top');
+        }
 	});
 	
 	$('#totop').click(function () {
