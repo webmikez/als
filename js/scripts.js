@@ -117,11 +117,15 @@ $(function(){
     $window.on('scroll',function(){
         $this = $(this);
         stop = Math.round($(window).scrollTop());
+
         if (stop > mainbottom) {
-            $header.slideDown(400, function() {
-                $header.removeClass('affix-top').addClass('affix');
+            if($header.hasClass('affix-top')) {
                 $('body').addClass('push-top');
-            });
+                $header.hide();
+                $header.slideDown(400, function () {
+                    $header.removeClass('affix-top').addClass('affix');
+                });
+            }
         } else {
             $header.removeClass('affix').addClass('affix-top');
             $('body').removeClass('push-top');
