@@ -49,7 +49,7 @@ jQuery(document).ready(function() {
     function scrollToHash(hash) {
         var target = hash,
             $target = $(target),
-            offset_delta = 77;
+            offset_delta = 74;
 
         if(hash == '') return;
 
@@ -91,5 +91,4 @@ jQuery(document).ready(function() {
         });
         return false;
     });
-	
 });
