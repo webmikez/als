@@ -87,12 +87,13 @@ $(function(){
         e.preventDefault();
         var hash = this.hash;
         var $this = $(this);
+        var top = hash == '#about' ? 499 : Math.round($(hash).offset().top)-74;
+
         $('html, body').finish().animate({
-            scrollTop: Math.round($(this.hash).offset().top)-74
+            scrollTop: top
         },450,function(){
             $('li.active', $header).removeClass('active');
             $this.parent().addClass('active');
-            //window.location.hash = hash;
         });
     });
     $window.on('scroll',function(){
