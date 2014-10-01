@@ -100,23 +100,28 @@ $(function(){
 
     $window.on('load',function(){
         var hash = window.location.hash;
-        var top = hash == '#about' ? 499 : Math.round($(hash).offset().top)-73;
 
-        $('html, body').finish().animate({
-            scrollTop: top
-        },450,function(){
-            $('li.active', $header).removeClass('active');
-            $header.find("ul#nav li a[href='" + hash +"']").parent().addClass('active');
-            window.location.hash = hash;
-        });
+        if(hash == 'undefined') {
+            var top = hash == '#about' ? 499 : Math.round($(hash).offset().top) - 73;
+
+            $('html, body').finish().animate({
+                scrollTop: top
+            }, 450, function () {
+                $('li.active', $header).removeClass('active');
+                $header.find("ul#nav li a[href='" + hash + "']").parent().addClass('active');
+                window.location.hash = hash;
+            });
+        }
     });
 
     $window.on('scroll',function(){
         $this = $(this);
         stop = Math.round($(window).scrollTop());
         if (stop > mainbottom) {
-            $header.removeClass('affix-top').addClass('affix');
-            $('body').addClass('push-top');
+            $header.slideDown(400, function() {
+                $header.removeClass('affix-top').addClass('affix');
+                $('body').addClass('push-top');
+            });
         } else {
             $header.removeClass('affix').addClass('affix-top');
             $('body').removeClass('push-top');
