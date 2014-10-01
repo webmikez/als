@@ -101,8 +101,10 @@ $(function(){
         stop = Math.round($(window).scrollTop());
         if (stop > mainbottom) {
             $header.removeClass('affix-top').addClass('affix');
+            $('body').addClass('push-top');
         } else {
             $header.removeClass('affix').addClass('affix-top');
+            $('body').removeClass('push-top');
         }
 
         for(var i = 0; i < $header_li.length; i++) {
