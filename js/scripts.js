@@ -86,7 +86,7 @@ $(function(){
         e.preventDefault();
         var hash = this.hash;
         var $this = $(this);
-        var top = hash == '#about' ? 499 : Math.round($(hash).offset().top)-73;
+        var top = hash == '#about' ? 501 : Math.round($(hash).offset().top)-73;
 
         $('html, body').finish().animate({
             scrollTop: top
