@@ -93,7 +93,7 @@ $(function(){
         },450,function(){
             $('li.active', $header).removeClass('active');
             $this.parent().addClass('active');
-            window.location.hash = hash;
+            //window.location.hash = hash;
         });
     });
 
@@ -108,7 +108,7 @@ $(function(){
             }, 450, function () {
                 $('li.active', $header).removeClass('active');
                 $header.find("ul#nav li a[href='" + hash + "']").parent().addClass('active');
-                window.location.hash = hash;
+                //window.location.hash = hash;
             });
         }
     });
