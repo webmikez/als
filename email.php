@@ -43,7 +43,7 @@ if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
     $message = "Имя: {$author} \n Email: {$email} \n Телефон: {$phone} \n Комментарий: {$comment}";
     $headers = 'From: ' .$email . "\r\n";
 
-    if(!mail($to, $subject, $message)) {
+    if(!mail($to, $subject, $message, $headers)) {
         $hasError = true;
         $rc["error"] = 'Произошла ошибка, попробуйте повторить позже';
     }
