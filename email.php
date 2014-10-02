@@ -38,18 +38,20 @@ if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
     }
 
 
-    $to = 'webmikez@gmail.com';
-    $subject = 'Новая заявка на сайте ALS';
-    $message = "Имя: {$author} \n Email: {$email} \n Телефон: {$phone} \n Комментарий: {$comment}";
-    $headers = 'From: ' .$email . "\r\n";
+    if(!$hasError) {
+        $to = 'webmikez@gmail.com';
+        $subject = 'Новая заявка на сайте ALS';
+        $message = "Имя: {$author} \n Email: {$email} \n Телефон: {$phone} \n Комментарий: {$comment}";
+        $headers = 'From: ' . $email . "\r\n";
 
-    if(!mail($to, $subject, $message, $headers)) {
-        $hasError = true;
-        $rc["error"] = 'Произошла ошибка, попробуйте повторить позже';
+        if (!mail($to, $subject, $message, $headers)) {
+            $hasError = true;
+            $rc["error"] = 'Произошла ошибка, попробуйте повторить позже';
+        }
     }
 
     if(!$hasError) {
-        $rc = array("status" => "success");
+        $rc = array("status" => "success", "success" => 'Спасибо, ваше сообщение успешно отправлено.<br>Мы свяжемся с вами в ближайшее время.');
     }
     echo json_encode($rc);
 }

@@ -56,10 +56,12 @@ jQuery(document).ready(function() {
                 $('p.has-error').removeClass('has-error');
 
                 if("status" in obj && obj.status == "success"){
-                    alert('Успешно отправлено');
+                    $('.modal-body p').html(obj.success);
+                    $('.modal').modal('show');
                 } else {
                     if("error" in obj) {
-                        alert(obj.error);
+                        $('.modal-body p').html(obj.error);
+                        $('.modal').modal('show')
                     }
 
                     for (var p in obj) {
