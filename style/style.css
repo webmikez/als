@@ -85,6 +85,10 @@ h2{
     position: relative!important;
     background-color: #e5eee9;
     z-index: 2!important;
+    -webkit-transition: background-color 200ms ease-out 0.2s;
+    -moz-transition: background-color 200ms ease-out 0.2s;
+    -o-transition: background-color 200ms ease-out 0.2s;
+    transition: background-color 200ms ease-out 0.2s;
 }
 .menu-holder ul{
     list-style-type: none;
@@ -135,14 +139,18 @@ h2{
     background-color: #011339;
     z-index: 100;
     top: 0;
+    -webkit-transition: background-color 200ms ease-out 0.2s;
+    -moz-transition: background-color 200ms ease-out 0.2s;
+    -o-transition: background-color 200ms ease-out 0.2s;
+    transition: background-color 200ms ease-out 0.2s;
 }
 .affix .logo-sm{
     padding: 13px 0 7px 0!important;
     opacity: 1;
-    -o-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 .affix li a{
     color: #5a777b;
