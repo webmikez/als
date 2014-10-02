@@ -4,7 +4,6 @@ window.onload = function(){
 	$('#sites-slider').lemmonSlider({
 		'infinite' : true
 	});
-    $('.timer').countTo();
 }
 
 $(function () {
@@ -117,6 +116,14 @@ $(function(){
     $window.on('scroll',function(){
         $this = $(this);
         stop = Math.round($(window).scrollTop());
+
+        if (!$('.timer').hasClass('completed') && stop > $('#numbers').offset().top - 670) {
+            $('.timer').countTo({
+                onComplete: function (value) {
+                    $(this).addClass('completed');
+                }
+            });
+        }
 
         if (stop > mainbottom) {
             $('body').addClass('push-top');
