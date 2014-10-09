@@ -39,7 +39,7 @@ if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
 
 
     if(!$hasError) {
-        $to = 'webmikez@gmail.com';
+        $to = 'info@alspro.ru';
         $subject = 'Новая заявка на сайте ALS';
         $message = "Имя: {$author} \n Email: {$email} \n Телефон: {$phone} \n Комментарий: {$comment}";
         $headers = 'From: ' . $email . "\r\n";
