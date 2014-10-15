@@ -175,9 +175,10 @@ h2{
 .scroll-to-top:hover{
     background-color: rgba(174, 17, 52, .3);
 }
-
 #header{
     background-image: url("../images/fon_als.jpg");
+    background-position: 35% 0;
+    background-repeat: no-repeat;
     height: 555px;
     text-align: center;
     clear: both;
@@ -188,8 +189,9 @@ h2{
 #header .about-holder{
     width: 748px;
     margin: 0 auto;
-    font-size: 15px;
-    font-weight: normal;
+    font-size: 20px;
+    font-weight: 100;
+    text-transform: uppercase;
     line-height: 18px;
     padding-top: 90px;
     color: #ffffff;
@@ -235,46 +237,34 @@ h2{
     font-size: 14px;
     font-weight: normal;
 }
-
 .slider{
     position: relative;
-
     overflow: hidden;
-
     width: 1000px;
 }
-.slider ul
-{
+.slider ul{
     margin: 0;
     padding: 0;
 }
-.slider li
-{
+.slider li{
     position: relative;
-
     float: left;
     margin: 0 10px 30px 0;
-
     width: 240px;
     height: 400px;
     list-style: none;
-
     -webkit-transition: all 200ms ease-out;
-
     -moz-transition: all 200ms ease-out;
     -o-transition: all 200ms ease-out;
     transition: all 200ms ease-out;
     zoom: 1;
 }
-.slider li .img
-{
+.slider li .img{
     overflow: hidden;
-
     width: 240px;
     height: 400px;
 }
-.slider li:hover .img img
-{
+.slider li:hover .img img{
     -webkit-transition: all 600ms;
     -moz-transition: all 600ms;
     -o-transition: all 600ms;
@@ -285,142 +275,103 @@ h2{
     -o-transform: scale(1.2);
     transform: scale(1.2);
 }
-.slider li .img img
-{
+.slider li .img img{
     -webkit-transition: all 600ms;
     -moz-transition: all 600ms;
     -o-transition: all 600ms;
     transition: all 600ms;
 }
-.slider li .text
-{
+.slider li .text{
     position: absolute;
     top: -400px;
-
     left: 0;
     z-index: 2;
     width: 100%;
     height: 100%;
-
     background: rgba(0,0,0,.7);
     color: #fff;
-
     text-align: center;
     font-size: 20px;
     line-height: 400px;
     opacity: 0;
-    opacity: 0;
-
     filter: alpha(opacity=0);
     -webkit-transition: all 400ms ease-out;
     -moz-transition: all 400ms ease-out;
     -o-transition: all 400ms ease-out;
-
     transition: all 400ms ease-out;
     -moz-opacity: 0;
 }
-.slider li:hover .text
-{
+.slider li:hover .text{
     top: 0;
     z-index: 2;
-
     opacity: 1;
     filter: alpha(opacity=100);
     -webkit-transition: all 400ms ease-out;
     -moz-transition: all 400ms ease-out;
-
     -o-transition: all 400ms ease-out;
-
     transition: all 400ms ease-out;
     -moz-opacity: 1;
 }
-.slider li .url
-{
+.slider li .url{
     margin-top: 5px;
 }
-.slider li img
-{
+.slider li img{
     display: block;
-
     width: 240px;
 }
-.slider li:hover
-{
+.slider li:hover{
     background: rgba(10, 10, 10, .75);
-
     cursor: pointer;
 }
-.slider li span
-{
+.slider li span{
     display: inline-block;
 }
 /* IE6 issues */
-.slider ul
-{
+.slider ul{
     width: 100%;
 }
-.client-item
-{
+.client-item{
     text-align: center;
 }
-.controls
-{
+.controls{
     display: inline-block;
     clear: both;
     overflow: hidden;
-
     margin-top: 20px;
 }
-.controls .next-slide
-{
+.controls .next-slide{
     position: relative;
-
     float: left;
-
     margin-left: 5px;
     padding: 10px 12px;
-
     border-radius: 5px;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
     background: none rgba(0, 0, 0, .3);
     text-indent: -9999px;
-
     -webkit-transition: all .4s ease-out;
     transition: all .4s ease-out;
 }
-.controls .next-slide span
-{
+.controls .next-slide span{
     display: block;
-
     width: 11px;
     height: 15px;
-
     background: transparent url(../images/prevnext.png) 100% 0 no-repeat;
 }
-.controls .prev-slide
-{
+.controls .prev-slide{
     position: relative;
-
     float: left;
-
     padding: 10px 12px;
-
     border-radius: 5px;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
     background: none rgba(0, 0, 0, .3);
-
     -webkit-transition: all .4s ease-out;
     transition: all .4s ease-out;
 }
-.controls .prev-slide span
-{
+.controls .prev-slide span{
     display: block;
-
     width: 11px;
     height: 15px;
-
     background: transparent url(../images/prevnext.png) 0 0 no-repeat;
 }
-.controls a:hover
-{
+.controls a:hover{
     background: none rgba(174, 17, 52, .3);
 }
 .contact-text {
@@ -686,7 +637,6 @@ input[type="submit"]:hover {
 	font-size: 20px;
 	font-weight: 400;
 }
-
 .push-right-5{
     margin-right: 2px;
 }
