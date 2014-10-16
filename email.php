@@ -15,10 +15,10 @@ if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
 
     header('Content-type: application/json');
 
-    $author = htmlspecialchars($_REQUEST['author'], ENT_QUOTES, 'UTF8');
-    $email = htmlspecialchars($_REQUEST['email'], ENT_QUOTES, 'UTF8');
-    $phone = htmlspecialchars($_REQUEST['phone'], ENT_QUOTES, 'UTF8');
-    $comment = htmlspecialchars($_REQUEST['comment'], ENT_QUOTES, 'UTF8');
+    $author = htmlspecialchars($_REQUEST['author'], ENT_QUOTES, 'UTF-8');
+    $email = htmlspecialchars($_REQUEST['email'], ENT_QUOTES, 'UTF-8');
+    $phone = htmlspecialchars($_REQUEST['phone'], ENT_QUOTES, 'UTF-8');
+    $comment = htmlspecialchars($_REQUEST['comment'], ENT_QUOTES, 'UTF-8');
 
     if(empty($author)) {
         $hasError = true;
