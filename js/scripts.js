@@ -81,7 +81,7 @@ $(function(){
     var timeStamp = new Date().getTime();
     var $header = $('#nav-holder');
     var $header_li = $header.find("ul#nav li a[href^='#']");
-    var logobottom = $('.logo-holder').offset().top + $('.logo-holder').height();
+    var logobottom = $('.logo-holder').offset().top + $('.logo-holder').height() + 80;
     var mainbottom = $header.offset().top;
     var stop = 0;
     var header_height = ($header.css('position') == 'fixed') ? Math.round($header.outerHeight(true)) : 0;
