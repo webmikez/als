@@ -81,6 +81,7 @@ $(function(){
     var timeStamp = new Date().getTime();
     var $header = $('#nav-holder');
     var $header_li = $header.find("ul#nav li a[href^='#']");
+    var logobottom = $('.logo-holder').offset().top + $('.logo-holder').height();
     var mainbottom = $header.offset().top;
     var stop = 0;
     var header_height = ($header.css('position') == 'fixed') ? Math.round($header.outerHeight(true)) : 0;
@@ -88,7 +89,7 @@ $(function(){
         e.preventDefault();
         var hash = this.hash;
         var $this = $(this);
-        var top = hash == '#about' ? 501 : Math.round($(hash).offset().top)-59;
+        var top = Math.round($(hash).offset().top)-59;
 
         $('html, body').finish().animate({
             scrollTop: top
@@ -103,7 +104,7 @@ $(function(){
         var hash = window.location.hash;
 
         if(hash == 'undefined') {
-            var top = hash == '#about' ? 499 : Math.round($(hash).offset().top) - 59;
+            var top = Math.round($(hash).offset().top) - 59;
 
             $('html, body').finish().animate({
                 scrollTop: top
@@ -130,11 +131,15 @@ $(function(){
         if (stop > mainbottom) {
             $('body').addClass('push-top');
             $header.removeClass('affix-top').addClass('affix');
-            $header.stop().animate({backgroundColor: '#011339'}, 300);
         } else {
             $header.removeClass('affix').addClass('affix-top');
             $('body').removeClass('push-top');
-            $header.stop().animate({backgroundColor: '#e5eee9'}, 300);
+        }
+
+        if (stop > logobottom) {
+            $('.logo-sm').addClass('view-logo');
+        } else {
+            $('.logo-sm').removeClass('view-logo');
         }
 
         for(var i = 0; i < $header_li.length; i++) {
