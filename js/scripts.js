@@ -96,8 +96,8 @@ $(function(){
         },450,function(){
             $('li.active', $header).removeClass('active');
             $this.parent().addClass('active');
-            //window.location.hash = hash;
         });
+
     });
 
     $window.on('load',function(){
