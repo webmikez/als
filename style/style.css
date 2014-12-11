@@ -20,11 +20,11 @@ h3
 }
 
 h2{
+    color: #000000;
     text-align: center;
-    font-size: 35px;
-	font-weight: 100;
 	text-transform: uppercase;
-	color: #000000;
+	font-weight: 100;
+	font-size: 35px;
 }
 
 .push-top{
@@ -33,8 +33,8 @@ h2{
 
 .clearfix:before,
 .clearfix:after {
-    content: " ";
     display: table;
+    content: " ";
 }
 
 .clearfix:after {
@@ -45,13 +45,13 @@ h2{
     *zoom: 1;
 }
 #themes h2 {
-	margin:60px 0 110px 0;
+	margin:60px 0 80px 0;
 }
 #numbers h2 {
-	color: #fff;
-	font-size: 35px;
-    margin-top: 23px;
-    margin-bottom: 0;
+	margin-top: 23px;
+	margin-bottom: 0;
+    color: #fff;
+    font-size: 35px;
     line-height: normal;
 }
 #advantages h2, #clients h2 {
@@ -78,20 +78,20 @@ h2{
     padding: 0;
 }
 .menu-holder{
+    overflow: hidden;
     width: 100%;
     height: 60px;
-    overflow: hidden;
 }
 .affix-top{
     position: relative!important;
-    background-color: #000;
     z-index: 2!important;
+    background-color: #000;
 }
 .menu-holder ul{
-    list-style-type: none;
-    width: 1000px;
     margin: 0 auto;
     padding: 0;
+    width: 1000px;
+    list-style-type: none;
 }
 
 .menu-holder li{
@@ -100,10 +100,10 @@ h2{
     text-align: center;
 }
 .menu-holder li a{
-    font-size: 12px;
-    text-transform: uppercase;
     text-decoration: none;
+    text-transform: uppercase;
     font-weight: 700;
+    font-size: 12px;
     font-family: 'Open Sans', sans-serif;
 }
 .affix {
@@ -120,34 +120,34 @@ h2{
 }
 .affix-top .logo-sm{
     position: relative;
-    width: 145px;
     padding: 13px 0 7px 0!important;
+    width: 145px;
 }
 .logo-sm img{
     position: relative;
     top: -85px;
     opacity: 0;
-    -o-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 .affix{
-    background-color: #000;
-    z-index: 100;
     top: 0;
+    z-index: 100;
+    background-color: #000;
 }
 .affix .logo-sm{
-    width: 145px;
     padding: 0!important;
+    width: 145px;
 }
 .logo-sm.view-logo img{
     position: relative;
     top: 7px;
     opacity: 1;
-    -o-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 .affix li a{
@@ -165,41 +165,41 @@ h2{
     right: 2%;
     bottom: 28px;
     display: none;
-    cursor: pointer;
     width: 35px;
     height: 35px;
-    background: url('../images/arrow.png') 50% 50% no-repeat rgba(0, 0, 0, .3);
     -webkit-border-radius: 3px;
     border-radius: 3px;
+    background: url('../images/arrow.png') 50% 50% no-repeat rgba(0, 0, 0, .3);
+    cursor: pointer;
 }
 .scroll-to-top:hover{
     background-color: rgba(174, 17, 52, .3);
 }
 #header{
+    clear: both;
+    height: 555px;
     background-image: url("../images/fon_als.jpg");
     background-position: 35% 0;
     background-repeat: no-repeat;
-    height: 555px;
     text-align: center;
-    clear: both;
 }
 #header .logo-holder{
     padding-top: 135px;
 }
 #header .about-holder{
-    width: 748px;
     margin: 0 auto;
-    font-size: 20px;
-    font-weight: 100;
-    text-transform: uppercase;
-    line-height: 18px;
     padding-top: 90px;
+    width: 748px;
     color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 18px;
 }
 .parallax {
     background-attachment: fixed;
-    background-repeat: no-repeat;
     background-position: top center;
+    background-repeat: no-repeat;
 }
 #themes{
     height: 520px;
@@ -214,7 +214,7 @@ h2{
     background: #f1eeed;
 }
 #advantages h2{
-    margin:125px 0 60px 0;
+    margin:100px 0 60px 0;
     line-height: normal;
 }
 #numbers{
@@ -234,8 +234,8 @@ h2{
     background: url("../images/fon_als.jpg") center center no-repeat;
     color: #fff;
     text-align: center;
-    font-size: 14px;
     font-weight: normal;
+    font-size: 14px;
 }
 .slider{
     position: relative;
@@ -375,43 +375,43 @@ h2{
     background: none rgba(174, 17, 52, .3);
 }
 .contact-text {
-    width: 695px;
     margin: 0 auto 40px auto;
+    width: 695px;
 }
 .contact-text .col-50{
     float: left;
-    text-align: center;
-    font-size: 22px;
-    font-weight: 100;
-    width: 50%;
-    -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
+    width: 50%;
+    text-align: center;
+    font-weight: 100;
+    font-size: 22px;
 }
 #contact .row{
     margin: 40px 0;
-    text-align: center;
     color: #6f4a30;
-    font-size: 14px;
+    text-align: center;
     font-weight: normal;
+    font-size: 14px;
     line-height: 18px;
 }
 form{
     display: block;
-    margin: 0 auto;
-    width: 815px;
     overflow: hidden;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    margin: 0 auto;
+    width: 815px;
 }
 form table {
     width: 100%;
 }
 form table td {
-    vertical-align: top;
-    width: 50%;
     padding: 0 20px;
+    width: 50%;
+    vertical-align: top;
 }
 form table td p{
     margin-top: 0;
@@ -437,10 +437,11 @@ input[type="text"], textarea {
     border: 1px solid #c4c4c4;
     background: #ffffff;
     color: #4a4a4a;
-    font-size: 14px;
     font-weight: normal;
+    font-size: 14px;
 }
 input[type="submit"] {
+    margin: -6px 0 0 0;
     padding: 10px 30px;
     border: none;
     background: #e37236;
@@ -457,8 +458,8 @@ input[type="submit"]:hover {
 .has-error .help-block{
     display: block;
     margin-top: 4px;
-    font-size: 13px;
     color: #ae1134;
+    font-size: 13px;
 }
 .has-error textarea,
 .has-error input[type="text"]{
@@ -473,13 +474,13 @@ input[type="submit"]:hover {
 
 #themes ul li{
     float: left;
-    width: 280px;
     padding-top: 150px;
+    width: 280px;
     color: #43332b;
-    text-transform: uppercase;
     text-align: center;
-    font-size: 18px;
+    text-transform: uppercase;
     font-weight: normal;
+    font-size: 18px;
 }
 #themes .t1{
     background: url("../images/icons/car.jpg") 50% 65px no-repeat;
@@ -499,22 +500,22 @@ input[type="submit"]:hover {
 	padding: 0;
 }
 #numbers ul li {
-	list-style: none;
 	display: block;
-    font-size: 14px;
-    width: 250px;
 	float: left;
-	margin-left: 49px;
-	text-align: center;
+    margin-left: 49px;
+    padding: 115px 0 0 0;
+	width: 250px;
 	background: transparent url('../images/numbers.png') 0 0 no-repeat;
-	padding: 115px 0 0 0;
-    color: #ffffff;
+	color: #ffffff;
+	list-style: none;
+	text-align: center;
+    font-size: 14px;
 }
 #numbers ul li span.number {
 	display: block;
+	color: #ffffff;
 	font-weight: 400;
 	font-size: 50px;
-	color: #ffffff;
 }
 #numbers ul li.num1 {
 	background-position: 98px 40px;
@@ -523,8 +524,8 @@ input[type="submit"]:hover {
     background-position: -625px 40px;
 }
 #numbers ul li.num3{
-    line-height: 56px;
     width: 390px;
+    line-height: 56px;
 }
 #numbers ul li.num3 span.number{
     font-size: 80px;
@@ -545,20 +546,20 @@ input[type="submit"]:hover {
     list-style-type: none;
 }
 #types ul li {
-	background: transparent url('../images/types.jpg') 0 0 no-repeat;
-	color: #6f4a30;
-    float: left;
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 18px;
-    padding: 70px 0 0 0;
+	float: left;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     margin: 0 30px 30px 30px;
+    padding: 70px 0 0 0;
     width: 293px;
     height: 120px;
+    background: transparent url('../images/types.jpg') 0 0 no-repeat;
+    color: #6f4a30;
     text-align: center;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
 }
 #types ul li.l1 {
 	background-position: 115px 0px;
@@ -596,18 +597,18 @@ input[type="submit"]:hover {
 }
 #advantages ul li {
     float: left;
-	background: transparent url('../images/advantages.jpg') 0 0 no-repeat;
-    width: 150px;
-    height: 124px;
-    padding-top: 75px;
-	margin: 0 30px;
-	color: #6f4a30;
-    font-size: 14px;
-    font-weight: normal;
+	-webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    margin: 0 30px;
+	padding-top: 75px;
+	width: 150px;
+    height: 124px;
+    background: transparent url('../images/advantages.jpg') 0 0 no-repeat;
+    color: #6f4a30;
     text-align: center;
+    font-weight: normal;
+    font-size: 14px;
     line-height: 18px;
 }
 #advantages ul li.l1 {
@@ -627,15 +628,15 @@ input[type="submit"]:hover {
 }
 .pricetext {
 	margin: 0 auto;
-    text-align: center;
     width: 610px;
+    text-align: center;
 }
 .pricetext span {
 	display: block;
 	margin: 0.7em;
 	text-align: center;
-	font-size: 20px;
 	font-weight: 400;
+	font-size: 20px;
 }
 .push-right-5{
     margin-right: 2px;
